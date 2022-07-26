@@ -1,0 +1,90 @@
+<section class="vh-100" style="background-color: #f4f5f7;">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col col-lg-6 mb-4 mb-lg-0">
+        <div class="card mb-3" style="border-radius: .5rem;">
+          <div class="row g-0">
+            <div class="col-md-4 gradient-custom text-center text-white"
+              style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
+              <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
+                alt="Avatar" class="img-fluid my-5" style="width: 125px;" />
+                <!-- <input type="file" class="form-controlame="> -->
+              <h5>{{fullName}}</h5>
+
+              <i class="fa fa-edit mb-5"></i>
+            </div>
+            <div class="col-md-8">
+              <div class="card-body p-4">
+                <h6>Information</h6>
+                <hr class="mt-0 mb-4">
+
+                <div class="card">
+                  <div class="card-body">
+
+                    <form  [formGroup]="settingsFormGroup"  (ngSubmit)="onUpdate()" >
+                      <div class="mb-3">
+                        <input
+                        type="text"
+                        class="form-control"
+                        formControlName="nom"
+                        value={{fullName}}
+                        [disabled]=false
+                        placeholder="Enter Name ...">
+                      </div>
+
+                      <div>
+                      <input
+                      type="text"
+                      class="form-control"
+                      formControlName="password"
+                      value={{password}}
+                      placeholder="Enter Password ...">
+                    </div>
+
+                      <div class="mb-3">
+                        <input
+                        type="date"
+                        class="form-control"
+                        formControlName="dateNaissance"
+                        value={{birthDay}}
+                        placeholder="Birthday...">
+                      </div>
+                      <div class="mb-3">
+                        <input
+                        type="text"
+                        class="form-control"
+                        formControlName="contact"
+                        value={{mobile}}
+                        placeholder="Contacts ...">
+                      </div>
+                      <div>
+                      <input
+                      type="file"
+                      class="form-control"
+                      formControlName="image"
+                      accept="image/*"
+                     >
+                    </div>
+                      <div class="mb-3">
+                        <input
+                        type="email"
+                        class="form-control"
+                        formControlName="email"
+                        value={{email}}
+                        placeholder="Enter Email ...">
+                      </div>
+                      <button type="submit" class="btn btn-warning mx-2 ">Update</button>
+
+
+                    </form>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

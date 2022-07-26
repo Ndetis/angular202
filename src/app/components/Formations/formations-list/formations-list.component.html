@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Level</th>
+            <th>DateDebut</th>
+            <th>DateFin</th>
+            <th>Categorie</th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of formationsInput" >
+            <td>{{item.id}}</td>
+            <td>{{item.title}}</td>
+            <td>{{item.level}}</td>
+            <td>{{item.dateDebut}}</td>
+            <td>{{item.dateFin}}</td>
+            <td>{{item.categorie}}</td>
+            <td>
+              <button
+                (click)="onDelete(item)"
+                class="btn btn-sm btn-danger">
+                <span class="fa fa-trash-o"></span>
+              </button>
+            </td>
+            <td>
+              <button
+                (click)="onEdit(item)"
+                class="btn btn-sm btn-danger">
+                <span class="fa fa-edit"></span>
+              </button>
+            </td>
+  
+          </tr>
+        </tbody>
+  
+  
+  
+      </table>
+    </div>
+  </div>
+  

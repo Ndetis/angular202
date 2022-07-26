@@ -1,0 +1,58 @@
+<div class="container">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Edit Competence
+      </h5>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-body">
+      <form [formGroup]="competenceFormGroup" *ngIf="competenceFormGroup" (ngSubmit)="onUpdateCompetence()">
+        <div class="mb-3">
+          <input
+          type="text"
+          class="form-control"
+          formControlName="title"
+          placeholder="Enter Tiltle ...">
+        </div>
+        <!-- <div *ngIf="title?.invalid && (title?.dirty || title?.touched)"
+        class="alert alert-danger"> Title is Required</div> -->
+        <div class="mb-3">
+          <input
+          type="number"
+          min="0"
+          class="form-control"
+          formControlName="level"
+          placeholder="Enter Level ...">
+        </div>
+        <div class="mb-3">
+          <input
+          type="date"
+          class="form-control"
+          formControlName="dateDebut"
+          placeholder="Start...">
+        </div>
+        <div class="mb-3">
+          <input
+          type="date"
+          class="form-control"
+          formControlName="dateFin"
+          placeholder="End ...">
+        </div>
+        <div class="mb-3">
+          <select
+          class="form-control"
+          formControlName="categorie"
+          placeholder="Category ..."
+          >
+            <option value="Web Developer">Web Developer</option>
+            <option value="Mobile Developer">Mobile Developer</option>
+
+          </select>
+        </div>
+        <button type="submit" class="btn btn-success ">Save</button>
+
+      </form>
+    </div>
+  </div>
+</div>
